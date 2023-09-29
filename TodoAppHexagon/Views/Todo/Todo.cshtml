@@ -1,0 +1,18 @@
+﻿@model TodoAppHexagon.Core.DTOs.CreateTodoItemDto
+
+<h2>Create a New Todo Item</h2>
+
+<form method="post" asp-controller="Todo" asp-action="Todo">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label asp-for="@Model.Title">Title</label>
+        <input asp-for="@Model.Title" name="Title" class="form-control" type="text"/>
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.IsCompleted">Is Completed</label>
+        <input asp-for="@Model.IsCompleted" name="IsCompleted" type="text"/>
+        <span asp-validation-for="IsCompleted" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

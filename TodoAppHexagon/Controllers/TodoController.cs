@@ -1,44 +1,46 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using TodoAppHexagon.Core.AdapterServices;
+﻿using Humanizer;
+using Microsoft.AspNetCore.Mvc;
+using TodoAppHexagon.Core.DTOs;
+using TodoAppHexagon.Core.Entities;
+using TodoAppHexagon.Core.Ports;
 
-[ApiController]
-[Route("api/todos")]
-public class TodoController : ControllerBase
+namespace TodoAppHexagon.Controllers
 {
-    private readonly ITodoService _todoService;
-
-    public TodoController(ITodoService todoService)
+    public class TodoController : Controller
     {
-        _todoService = todoService;
-    }
+        private readonly ITodoRepository _todoRepository;
 
-    [HttpGet]
-    public IActionResult GetAllTodos()
-    {
-        // Implement logic to get all todos using _todoService
-    }
+        public TodoController(ITodoRepository todoRepository)
+        {
+            _todoRepository = todoRepository;
+        }
 
-    [HttpGet("{id}")]
-    public IActionResult GetTodoById(Guid id)
-    {
-        // Implement logic to get a todo by ID using _todoService
-    }
+        public IActionResult Todo()
+        {
+            var model = new CreateTodoItemDto();
+            return View(model);
+        }
 
-    [HttpPost]
-    public IActionResult CreateTodo([FromBody] TodoCreateDto todoCreateDto)
-    {
-        // Implement logic to create a todo using _todoService
-    }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Todo(CreateTodoItemDto dto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Todo");
+            }
 
-    [HttpPut("{id}")]
-    public IActionResult UpdateTodo(Guid id, [FromBody] TodoUpdateDto todoUpdateDto)
-    {
-        // Implement logic to update a todo using _todoService
-    }
+            var todoItem = new TodoItem(Guid.NewGuid(), dto.Title, dto.IsCompleted, DateTime.Now)
+            {
+                Title = dto.Title,
+                IsCompleted = dto.IsCompleted,
+                CreatedAt = DateTime.Now
+            };
 
-    [HttpDelete("{id}")]
-    public IActionResult DeleteTodo(Guid id)
-    {
-        // Implement logic to delete a todo using _todoService
+            await _todoRepository.CreateAsync(todoItem);
+
+            return RedirectToAction("Todo");
+        }
+
     }
 }
