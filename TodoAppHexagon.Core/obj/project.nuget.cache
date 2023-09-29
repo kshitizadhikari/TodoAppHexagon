@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cVwHsElZmdAAIIqk3SNpbTgFw2aYJK1GA8Tu9FX6V5fymyAg2Ift52nQUg17IWG+heGabH+trVPoa1v9V8MiyQ==",
+  "dgSpecHash": "Vd28jkck9xSVBe04TCvG/z6yaxEXQD+3Ldn1CVO+xah/y7SXfUhEk1/7mu3Vg6ei0mmblY/UhkcFccHyT4uDoA==",
   "success": true,
-  "projectFilePath": "D:\\DotNet\\TodoAppHexagon\\TodoAppHexagon.Core\\TodoAppHexagon.Core.csproj",
+  "projectFilePath": "D:\\asp.net\\TodoAppHexagon\\TodoAppHexagon.Core\\TodoAppHexagon.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
