@@ -1,0 +1,12 @@
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Core\obj\Debug\net7.0\TodoAppHexagon.Core.csproj.AssemblyReference.cache
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Core\obj\Debug\net7.0\TodoAppHexagon.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Core\obj\Debug\net7.0\TodoAppHexagon.Core.AssemblyInfoInputs.cache
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Core\obj\Debug\net7.0\TodoAppHexagon.Core.AssemblyInfo.cs
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Core\obj\Debug\net7.0\TodoAppHexagon.Core.csproj.CoreCompileInputs.cache
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Core\bin\Debug\net7.0\TodoAppHexagon.Core.deps.json
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Core\bin\Debug\net7.0\TodoAppHexagon.Core.dll
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Core\bin\Debug\net7.0\TodoAppHexagon.Core.pdb
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Core\obj\Debug\net7.0\TodoAppHexagon.Core.dll
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Core\obj\Debug\net7.0\refint\TodoAppHexagon.Core.dll
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Core\obj\Debug\net7.0\TodoAppHexagon.Core.pdb
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Core\obj\Debug\net7.0\ref\TodoAppHexagon.Core.dll

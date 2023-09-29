@@ -1,5 +1,10 @@
-var builder = WebApplication.CreateBuilder(args);
+using Microsoft.EntityFrameworkCore;
+using System;
+using TodoAppHexagon.Adapaters.SqlServer.Data;
 
+var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'AppDbContextConnection' not found.");
+builder.Services.AddDbContext<TodoDbContext>(options => options.UseSqlServer(connectionString));
 // Add services to the container.
 builder.Services.AddRazorPages();
 
