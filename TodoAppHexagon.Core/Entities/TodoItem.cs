@@ -1,15 +1,18 @@
-﻿]using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using TodoAppHexagon.Core.Primitives;
 
-namespace TodoAppHexagon.Core.Entities
-{
-    public sealed class TodoItem
+namespace TodoAppHexagon.Core.Entities;
+
+    public sealed class TodoItem : Entity
     {
-        Guid Id { get; set; }
+        public TodoItem(Guid id, string title, DateTime createdAt) : base(id)
+        {
+            Title = title;
+            CreatedAt = createdAt;
+        }
+
         public required string Title { get; set; }
+        public bool IsCompleted { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
     }
-}
+

@@ -1,0 +1,15 @@
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Adapaters.SqlServer\obj\Debug\net7.0\TodoAppHexagon.Adapaters.SqlServer.csproj.AssemblyReference.cache
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Adapaters.SqlServer\obj\Debug\net7.0\TodoAppHexagon.Adapaters.SqlServer.GeneratedMSBuildEditorConfig.editorconfig
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Adapaters.SqlServer\obj\Debug\net7.0\TodoAppHexagon.Adapaters.SqlServer.AssemblyInfoInputs.cache
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Adapaters.SqlServer\obj\Debug\net7.0\TodoAppHexagon.Adapaters.SqlServer.AssemblyInfo.cs
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Adapaters.SqlServer\obj\Debug\net7.0\TodoAppHexagon.Adapaters.SqlServer.csproj.CoreCompileInputs.cache
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Adapaters.SqlServer\bin\Debug\net7.0\TodoAppHexagon.Adapaters.SqlServer.deps.json
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Adapaters.SqlServer\bin\Debug\net7.0\TodoAppHexagon.Adapaters.SqlServer.dll
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Adapaters.SqlServer\bin\Debug\net7.0\TodoAppHexagon.Adapaters.SqlServer.pdb
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Adapaters.SqlServer\bin\Debug\net7.0\TodoAppHexagon.Core.dll
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Adapaters.SqlServer\bin\Debug\net7.0\TodoAppHexagon.Core.pdb
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Adapaters.SqlServer\obj\Debug\net7.0\TodoAppHexagon.Adapaters.SqlServer.csproj.CopyComplete
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Adapaters.SqlServer\obj\Debug\net7.0\TodoAppHexagon.Adapaters.SqlServer.dll
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Adapaters.SqlServer\obj\Debug\net7.0\refint\TodoAppHexagon.Adapaters.SqlServer.dll
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Adapaters.SqlServer\obj\Debug\net7.0\TodoAppHexagon.Adapaters.SqlServer.pdb
+D:\DotNet\TodoAppHexagon\TodoAppHexagon.Adapaters.SqlServer\obj\Debug\net7.0\ref\TodoAppHexagon.Adapaters.SqlServer.dll
