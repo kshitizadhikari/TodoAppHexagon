@@ -334,3 +334,6 @@ D:\asp.net\TodoAppHexagon\TodoAppHexagon\obj\Debug\net7.0\TodoAppHexagon.csproj.
 D:\asp.net\TodoAppHexagon\TodoAppHexagon\obj\Debug\net7.0\TodoAppHexagon.genruntimeconfig.cache
 D:\asp.net\TodoAppHexagon\TodoAppHexagon\obj\Debug\net7.0\ref\TodoAppHexagon.dll
 D:\asp.net\TodoAppHexagon\TodoAppHexagon\obj\Debug\net7.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+D:\asp.net\TodoAppHexagon\TodoAppHexagon\bin\Debug\net7.0\MediatR.dll
+D:\asp.net\TodoAppHexagon\TodoAppHexagon\bin\Debug\net7.0\MediatR.Contracts.dll
+D:\asp.net\TodoAppHexagon\TodoAppHexagon\bin\Debug\net7.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

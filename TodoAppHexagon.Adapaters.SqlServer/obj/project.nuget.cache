@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "v1s1g/VLmP8gPOsIHNaWLLoN2O4/Vok5XjHos87N7Qqub4ZJdp+dbrwG9P8midWS5JuuEyKrjvohjGdASJ0MBA==",
+  "dgSpecHash": "eCIiWiwXVxTBJ+20/u3ZxXkVWO4RAIcY+I03SbQ01xQqrm9/EytXOab7WPgQ/jEQubE0w4kjgRWzFhgzdtFniQ==",
   "success": true,
   "projectFilePath": "D:\\asp.net\\TodoAppHexagon\\TodoAppHexagon.Adapaters.SqlServer\\TodoAppHexagon.Adapaters.SqlServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kshitiz\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\kshitiz\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\kshitiz\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\kshitiz\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\kshitiz\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
     "C:\\Users\\kshitiz\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\kshitiz\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\kshitiz\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",

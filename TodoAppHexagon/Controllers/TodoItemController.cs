@@ -1,6 +1,8 @@
-﻿using Humanizer;
+﻿ using Humanizer;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using TodoAppHexagon.Core.AdapterServices;
+using TodoAppHexagon.Core.CQRS.Commands.CreateTodoItem;
 using TodoAppHexagon.Core.DTOs;
 using TodoAppHexagon.Core.Entities;
 using TodoAppHexagon.Core.Ports;
@@ -10,10 +12,12 @@ namespace TodoAppHexagon.Controllers
     public class TodoItemController : Controller
     {
         private readonly ITodoItemService _todoItemService;
+        private readonly IMediator _mediator;
 
-        public TodoItemController(ITodoItemService todoItemService)
+        public TodoItemController(ITodoItemService todoItemService, IMediator mediator)
         {
             _todoItemService = todoItemService;
+            _mediator = mediator;
         }
 
         public IActionResult Todo()
@@ -31,8 +35,13 @@ namespace TodoAppHexagon.Controllers
                 return RedirectToAction("Todo");
             }
 
-       
-            await _todoItemService.CreateAsync(dto);
+            var command = new CreateTodoItemCommand
+            {
+                Title = dto.Title,
+                IsCompleted = dto.IsCompleted
+            };
+
+            await _mediator.Send(command);
 
             return RedirectToAction("Todo");
         }

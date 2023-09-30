@@ -1,7 +1,10 @@
+using System.Reflection;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
+using Microsoft.Extensions.DependencyInjection;
 using TodoAppHexagon.Adapaters.SqlServer.Data;
 using TodoAppHexagon.Core.AdapterServices;
+using TodoAppHexagon.Core.CQRS.Commands.CreateTodoItem;
 using TodoAppHexagon.Core.Ports;
 using TodoAppHexagon.Core.Services;
 
@@ -12,7 +15,9 @@ builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
 builder.Services.AddDbContext<TodoDbContext>(options => options.UseSqlServer(connectionString));
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddControllersWithViews(); 
+builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IMediator, Mediator>();
+builder.Services.AddMediatR(typeof(CreateTodoItemCommandHandler).GetTypeInfo().Assembly);
 builder.Services.AddTransient<ITodoRepository, SqlServerTodoRepository>();
 builder.Services.AddTransient<ITodoItemService, TodoItemService>();
 //builder.Services.AddTransient<ITodoService, TodoItemService>();
