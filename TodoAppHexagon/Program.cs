@@ -3,6 +3,7 @@ using System;
 using TodoAppHexagon.Adapaters.SqlServer.Data;
 using TodoAppHexagon.Core.AdapterServices;
 using TodoAppHexagon.Core.Ports;
+using TodoAppHexagon.Core.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ??
@@ -13,7 +14,8 @@ builder.Services.AddDbContext<TodoDbContext>(options => options.UseSqlServer(con
 builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews(); 
 builder.Services.AddTransient<ITodoRepository, SqlServerTodoRepository>();
-//builder.Services.AddTransient<ITodoService, TodoService>();
+builder.Services.AddTransient<ITodoItemService, TodoItemService>();
+//builder.Services.AddTransient<ITodoService, TodoItemService>();
 
 var app = builder.Build();
 
