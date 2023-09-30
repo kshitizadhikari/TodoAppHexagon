@@ -1,8 +1,8 @@
 ﻿using TodoAppHexagon.Core.AdapterServices;
+using TodoAppHexagon.Core.CQRS.Commands.CreateTodoItem;
 using TodoAppHexagon.Core.DTOs;
 using TodoAppHexagon.Core.Entities;
 using TodoAppHexagon.Core.Ports;
-
 namespace TodoAppHexagon.Core.Services
 {
     public class TodoItemService : ITodoItemService
@@ -14,36 +14,35 @@ namespace TodoAppHexagon.Core.Services
             _todoRepository = todoRepository;
         }
 
-        public async Task<List<TodoItem>> GetAllAsync()
+        public Task<List<TodoItem>> GetAllTodoItems()
         {
-            return await _todoRepository.GetAllAsync();
+            throw new NotImplementedException();
         }
 
-        public async Task<TodoItem> GetByIdAsync(Guid id)
+        public Task<TodoItem> GetTodoItem(Guid id)
         {
-            return await _todoRepository.GetByIdAsync(id);
+            throw new NotImplementedException();
         }
 
-        public async Task CreateAsync(CreateTodoItemDto itemDto)
+        public async Task CreateTodoItem(CreateTodoItemCommand item)
         {
-            var todoItem = new TodoItem(Guid.NewGuid(), itemDto.Title, itemDto.IsCompleted, DateTime.Now)
+            var todoItem = new TodoItem(Guid.NewGuid(), item.Title, item.IsCompleted, DateTime.Now)
             {
-                Title = itemDto.Title,
-                IsCompleted = itemDto.IsCompleted,
+                Title = item.Title,
+                IsCompleted = item.IsCompleted,
                 CreatedAt = DateTime.Now
             };
-
             await _todoRepository.CreateAsync(todoItem);
         }
 
-        public async Task UpdateAsync(TodoItem item)
+        public Task UpdateTodoItem(TodoItem item)
         {
-            await _todoRepository.UpdateAsync(item);
+            throw new NotImplementedException();
         }
 
-        public async Task DeleteAsync(Guid id)
+        public Task DeleteTodoItem(Guid id)
         {
-            await _todoRepository.DeleteAsync(id);
+            throw new NotImplementedException();
         }
     }
 }

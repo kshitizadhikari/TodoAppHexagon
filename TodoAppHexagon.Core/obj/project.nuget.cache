@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Vd28jkck9xSVBe04TCvG/z6yaxEXQD+3Ldn1CVO+xah/y7SXfUhEk1/7mu3Vg6ei0mmblY/UhkcFccHyT4uDoA==",
+  "dgSpecHash": "Mc8RbcpxICO8CmToTkTMMl1eyLs8EbFTLOD9KfglLJu1MNND0qQkmj1JEcGN+xzgaTS2l/8beTGjxTO8mqekJw==",
   "success": true,
   "projectFilePath": "D:\\asp.net\\TodoAppHexagon\\TodoAppHexagon.Core\\TodoAppHexagon.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\kshitiz\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\kshitiz\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\kshitiz\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
+    "C:\\Users\\kshitiz\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
