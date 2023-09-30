@@ -1,18 +1,19 @@
 ﻿using Humanizer;
 using Microsoft.AspNetCore.Mvc;
+using TodoAppHexagon.Core.AdapterServices;
 using TodoAppHexagon.Core.DTOs;
 using TodoAppHexagon.Core.Entities;
 using TodoAppHexagon.Core.Ports;
 
 namespace TodoAppHexagon.Controllers
 {
-    public class TodoController : Controller
+    public class TodoItemController : Controller
     {
-        private readonly ITodoRepository _todoRepository;
+        private readonly ITodoItemService _todoItemService;
 
-        public TodoController(ITodoRepository todoRepository)
+        public TodoItemController(ITodoItemService todoItemService)
         {
-            _todoRepository = todoRepository;
+            _todoItemService = todoItemService;
         }
 
         public IActionResult Todo()
@@ -30,14 +31,8 @@ namespace TodoAppHexagon.Controllers
                 return RedirectToAction("Todo");
             }
 
-            var todoItem = new TodoItem(Guid.NewGuid(), dto.Title, dto.IsCompleted, DateTime.Now)
-            {
-                Title = dto.Title,
-                IsCompleted = dto.IsCompleted,
-                CreatedAt = DateTime.Now
-            };
-
-            await _todoRepository.CreateAsync(todoItem);
+       
+            await _todoItemService.CreateAsync(dto);
 
             return RedirectToAction("Todo");
         }
