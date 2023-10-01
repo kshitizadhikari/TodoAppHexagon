@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MediatR;
+using TodoAppHexagon.Core.DTOs;
 
 namespace TodoAppHexagon.Core.CQRS.Commands.UpdateTodoItem
 {
-    public class UpdateTodoItemCommand : ICommand
+    public class UpdateTodoItemCommand : IRequest<bool>
     {
-        public string Title { get; set; }
-        public string IsCompleted{ get; set; }
+        public UpdateTodoItemDto UpdateDto { get; set; }
 
-        public DateTime UpdatedAt { get; set; } = DateTime.Now;
+        public UpdateTodoItemCommand(UpdateTodoItemDto updateDto)
+        {
+            UpdateDto = updateDto;
+        }
     }
+
 }

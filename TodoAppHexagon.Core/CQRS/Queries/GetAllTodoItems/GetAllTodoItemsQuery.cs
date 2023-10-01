@@ -9,7 +9,7 @@ using TodoAppHexagon.Core.Entities;
 
 namespace TodoAppHexagon.Core.CQRS.Queries.GetAllTodoItems
 {
-    public class GetAllTodoItemsQuery : IQuery, IRequest<List<TodoItemDto>>
+    public class GetAllTodoItemsQuery : IQuery, IRequest<IEnumerable<TodoItemDto>>
     {
 
     }

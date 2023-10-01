@@ -11,7 +11,7 @@ using TodoAppHexagon.Core.Entities;
 
 namespace TodoAppHexagon.Core.CQRS.Queries.GetAllTodoItems
 {
-    public class GetAllTodoItemsQueryHandler : IQuery, IRequestHandler<GetAllTodoItemsQuery, List<TodoItemDto>>
+    public class GetAllTodoItemsQueryHandler : IQuery, IRequestHandler<GetAllTodoItemsQuery, IEnumerable<TodoItemDto>>
     {
         private readonly ITodoItemService _todoService;
 
@@ -19,9 +19,9 @@ namespace TodoAppHexagon.Core.CQRS.Queries.GetAllTodoItems
         {
             _todoService = todoService;
         }
-        public async Task<List<TodoItemDto>> Handle(GetAllTodoItemsQuery request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<TodoItemDto>> Handle(GetAllTodoItemsQuery request, CancellationToken cancellationToken)
         {
-            List<TodoItemDto> allTodoItems = await _todoService.GetAllTodoItems();
+            IEnumerable<TodoItemDto> allTodoItems = await _todoService.GetAllTodoItems();
             return allTodoItems;
         }
     }

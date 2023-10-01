@@ -9,10 +9,10 @@ namespace TodoAppHexagon.Core.Ports
 {
     public interface ITodoRepository 
     {
-        Task<List<TodoItem>> GetAllAsync();
-        Task<TodoItem> GetByIdAsync(Guid id);
+        Task<IEnumerable<TodoItem>> GetAllAsync();
+        Task<TodoItem?> GetByIdAsync(Guid id);
         Task CreateAsync(TodoItem item);
-        Task UpdateAsync(TodoItem item);
-        Task DeleteAsync(Guid id);
+        Task<bool> UpdateAsync(TodoItem item);
+        Task<bool> DeleteAsync(Guid id);
     }
 }

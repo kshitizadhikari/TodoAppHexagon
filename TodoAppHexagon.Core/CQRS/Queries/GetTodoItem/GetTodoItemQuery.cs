@@ -12,5 +12,10 @@ namespace TodoAppHexagon.Core.CQRS.Queries.GetTodoItem
     public class GetTodoItemQuery : IQuery, IRequest<TodoItemDto>
     {
         public Guid Id { get; set; }
+
+        public GetTodoItemQuery(Guid id)
+        {
+            Id = id;
+        }
     }
 }
