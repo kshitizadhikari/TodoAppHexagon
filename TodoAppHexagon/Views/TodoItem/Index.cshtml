@@ -1,14 +1,14 @@
-﻿@model List<TodoAppHexagon.Core.DTOs.TodoItemDto>
+﻿@model IEnumerable<TodoAppHexagon.Core.DTOs.TodoItemDto>
 @{
     ViewData["Title"] = "Todo Index";
 }
 
-<div>
+<div class="mb-5">
     <h1>Todo Index Page</h1>
 </div>
 
 <div>
-    <div>
+    <div class="mb-3">
         <button>
             <a class="nav-link text-dark" asp-area="" asp-controller="TodoItem" asp-action="AddTodo">Add Todo</a>
         </button>
@@ -32,7 +32,7 @@
                 <td>@todo.IsCompleted</td>
                 <td>
                     <a asp-area="" asp-controller="TodoItem" asp-action="UpdateTodo" asp-route-id="@todo.Id">Edit</a> |
-                    @*<a asp-area="Admin" asp-controller="Home" asp-action="DeleteRoom" asp-route-id="@room.Id">Remove</a>*@
+                    <a asp-area="" asp-controller="TodoItem" asp-action="DeleteTodo" asp-route-id="@todo.Id">Remove</a>
                 </td>
             </tr>
         }

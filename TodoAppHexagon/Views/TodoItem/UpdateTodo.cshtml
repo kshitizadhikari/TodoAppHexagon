@@ -4,16 +4,18 @@
 
 <form method="post" asp-controller="TodoItem" asp-action="UpdateTodo">
     @Html.AntiForgeryToken()
-    <div class="form-group">
-        <input type="hidden" asp-for="@Model.Id" name="Id" value="@Model.Id"/>
-        <label asp-for="@Model.Title">Title</label>
+    <div class="mb-3">
+        <label asp-for="@Model.Title" class="form-label">Title</label>
         <input asp-for="@Model.Title" name="Title" class="form-control" type="text"/>
         <span asp-validation-for="Title" class="text-danger"></span>
     </div>
-    <div class="form-group">
-        <label asp-for="@Model.IsCompleted">Is Completed</label>
-        <input asp-for="@Model.IsCompleted" name="IsCompleted" type="text" />
+    <div class="mb-3">
+        <label asp-for="@Model.IsCompleted" class="form-label">Status</label>
+        <input asp-for="@Model.IsCompleted" name="IsCompleted" class="form-control" type="text" />
         <span asp-validation-for="IsCompleted" class="text-danger"></span>
     </div>
-    <button type="submit" class="btn btn-primary">Update</button>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </div>
 </form>

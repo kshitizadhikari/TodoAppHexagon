@@ -3,6 +3,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using TodoAppHexagon.Core.AdapterServices;
 using TodoAppHexagon.Core.CQRS.Commands.CreateTodoItem;
+ using TodoAppHexagon.Core.CQRS.Commands.DeleteTodoItem;
  using TodoAppHexagon.Core.CQRS.Commands.UpdateTodoItem;
  using TodoAppHexagon.Core.CQRS.Queries.GetAllTodoItems;
  using TodoAppHexagon.Core.CQRS.Queries.GetTodoItem;
@@ -25,7 +26,7 @@ namespace TodoAppHexagon.Controllers
 
         public async Task<IActionResult> Index()
         {
-            List<TodoItemDto> allTodoItemDtos = await _mediator.Send(new GetAllTodoItemsQuery());
+            IEnumerable<TodoItemDto> allTodoItemDtos = await _mediator.Send(new GetAllTodoItemsQuery());
             return View(allTodoItemDtos);
         }
 
@@ -85,6 +86,18 @@ namespace TodoAppHexagon.Controllers
             }
 
             TempData["success"] = "Updated Successfully";
+            return RedirectToAction("Index");
+        }
+
+        public async Task<IActionResult> DeleteTodo(Guid id)
+        {
+            DeleteTodoItemDto obj = new DeleteTodoItemDto(id);
+            bool result = await _mediator.Send(new DeleteTodoItemCommand(obj));
+            if (!result)
+            {
+                TempData["error"] = "Deletion Unsuccessful";
+            }
+            TempData["success"] = "Deleted Successfully";
             return RedirectToAction("Index");
         }
 

@@ -14,10 +14,10 @@ namespace TodoAppHexagon.Core.Services
             _todoRepository = todoRepository;
         }
 
-        public async Task<List<TodoItemDto>> GetAllTodoItems()
+        public async Task<IEnumerable<TodoItemDto>> GetAllTodoItems()
         {
-            List<TodoItem> allTodoItems = await _todoRepository.GetAllAsync();
-            List<TodoItemDto> todoItemDtos = allTodoItems.Select(item => new TodoItemDto
+            IEnumerable<TodoItem> allTodoItems = await _todoRepository.GetAllAsync();
+            IEnumerable<TodoItemDto> todoItemDtos = allTodoItems.Select(item => new TodoItemDto
             {
                 Id = item.Id,
                 Title = item.Title,
@@ -51,7 +51,7 @@ namespace TodoAppHexagon.Core.Services
 
         public async Task<bool> UpdateTodoItem(UpdateTodoItemDto item)
         {
-            TodoItem obj = await _todoRepository.GetByIdAsync(item.Id);
+            TodoItem? obj = await _todoRepository.GetByIdAsync(item.Id);
             obj.Title = item.Title;
             obj.IsCompleted = item.IsCompleted;
             obj.UpdateAt = DateTime.Now;
@@ -59,9 +59,11 @@ namespace TodoAppHexagon.Core.Services
             return result;
         }
 
-        public Task DeleteTodoItem(Guid id)
+        public async Task<bool> DeleteTodoItem(Guid id)
         {
-            throw new NotImplementedException();
+            TodoItem? obj = await _todoRepository.GetByIdAsync(id);
+            bool result = await _todoRepository.DeleteAsync(id);
+            return result;
         }
     }
 }
