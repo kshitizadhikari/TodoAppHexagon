@@ -11,7 +11,7 @@ namespace TodoAppHexagon.Core.Entities;
             IsCompleted = isCompleted;
         }
 
-        public required string Title { get; set; }
+    public required string Title { get; set; }
         public string IsCompleted { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime? UpdateAt { get; set; } = null;

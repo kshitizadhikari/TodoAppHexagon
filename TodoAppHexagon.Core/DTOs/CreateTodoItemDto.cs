@@ -9,7 +9,7 @@ namespace TodoAppHexagon.Core.DTOs
 {
     public class CreateTodoItemDto
     {
-        public string? Title { get; set; }
+        public string Title { get; set; }
         public string IsCompleted { get; set; }
     }
 }

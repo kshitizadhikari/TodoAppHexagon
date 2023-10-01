@@ -1,0 +1,15 @@
+D:\asp.net\TodoAppHexagon\TodoHexagon.Adapters.MongoDb\bin\Debug\net7.0\TodoHexagon.Adapters.MongoDb.deps.json
+D:\asp.net\TodoAppHexagon\TodoHexagon.Adapters.MongoDb\bin\Debug\net7.0\TodoHexagon.Adapters.MongoDb.dll
+D:\asp.net\TodoAppHexagon\TodoHexagon.Adapters.MongoDb\bin\Debug\net7.0\TodoHexagon.Adapters.MongoDb.pdb
+D:\asp.net\TodoAppHexagon\TodoHexagon.Adapters.MongoDb\bin\Debug\net7.0\TodoAppHexagon.Core.dll
+D:\asp.net\TodoAppHexagon\TodoHexagon.Adapters.MongoDb\bin\Debug\net7.0\TodoAppHexagon.Core.pdb
+D:\asp.net\TodoAppHexagon\TodoHexagon.Adapters.MongoDb\obj\Debug\net7.0\TodoHexagon.Adapters.MongoDb.csproj.AssemblyReference.cache
+D:\asp.net\TodoAppHexagon\TodoHexagon.Adapters.MongoDb\obj\Debug\net7.0\TodoHexagon.Adapters.MongoDb.GeneratedMSBuildEditorConfig.editorconfig
+D:\asp.net\TodoAppHexagon\TodoHexagon.Adapters.MongoDb\obj\Debug\net7.0\TodoHexagon.Adapters.MongoDb.AssemblyInfoInputs.cache
+D:\asp.net\TodoAppHexagon\TodoHexagon.Adapters.MongoDb\obj\Debug\net7.0\TodoHexagon.Adapters.MongoDb.AssemblyInfo.cs
+D:\asp.net\TodoAppHexagon\TodoHexagon.Adapters.MongoDb\obj\Debug\net7.0\TodoHexagon.Adapters.MongoDb.csproj.CoreCompileInputs.cache
+D:\asp.net\TodoAppHexagon\TodoHexagon.Adapters.MongoDb\obj\Debug\net7.0\TodoHexagon.Adapters.MongoDb.csproj.CopyComplete
+D:\asp.net\TodoAppHexagon\TodoHexagon.Adapters.MongoDb\obj\Debug\net7.0\TodoHexagon.Adapters.MongoDb.dll
+D:\asp.net\TodoAppHexagon\TodoHexagon.Adapters.MongoDb\obj\Debug\net7.0\refint\TodoHexagon.Adapters.MongoDb.dll
+D:\asp.net\TodoAppHexagon\TodoHexagon.Adapters.MongoDb\obj\Debug\net7.0\TodoHexagon.Adapters.MongoDb.pdb
+D:\asp.net\TodoAppHexagon\TodoHexagon.Adapters.MongoDb\obj\Debug\net7.0\ref\TodoHexagon.Adapters.MongoDb.dll
