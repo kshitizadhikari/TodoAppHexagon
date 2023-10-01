@@ -3,7 +3,9 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using TodoAppHexagon.Core.AdapterServices;
 using TodoAppHexagon.Core.CQRS.Commands.CreateTodoItem;
+ using TodoAppHexagon.Core.CQRS.Commands.UpdateTodoItem;
  using TodoAppHexagon.Core.CQRS.Queries.GetAllTodoItems;
+ using TodoAppHexagon.Core.CQRS.Queries.GetTodoItem;
  using TodoAppHexagon.Core.DTOs;
 using TodoAppHexagon.Core.Entities;
 using TodoAppHexagon.Core.Ports;
@@ -50,7 +52,40 @@ namespace TodoAppHexagon.Controllers
 
             await _mediator.Send(command);
 
-            return RedirectToAction("AddTodo");
+            return RedirectToAction("Index");
+        }
+
+        public async Task<IActionResult> UpdateTodo(Guid id)
+        {
+            TodoItemDto obj = await _mediator.Send(new GetTodoItemQuery(id));
+            return View(obj);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> UpdateTodo(TodoItemDto dto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+
+            UpdateTodoItemDto obj = new UpdateTodoItemDto
+            {
+                Id = dto.Id,
+                Title = dto.Title,
+                IsCompleted = dto.IsCompleted,
+                UpdateAt = DateTime.Now
+            };
+
+            bool result = await _mediator.Send(new UpdateTodoItemCommand(obj));
+            if (!result)
+            {
+                TempData["error"] = "Not Updated";
+            }
+
+            TempData["success"] = "Updated Successfully";
+            return RedirectToAction("Index");
         }
 
     }

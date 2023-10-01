@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TodoAppHexagon.Adapaters.SqlServer.Data;
+using TodoAppHexagon.Core.DTOs;
 using TodoAppHexagon.Core.Entities;
 using TodoAppHexagon.Core.Ports;
 
@@ -28,10 +29,11 @@ public class SqlServerTodoRepository : ITodoRepository
         await _dbContext.SaveChangesAsync();
     }
 
-    public async Task UpdateAsync(TodoItem item)
+    public async Task<bool> UpdateAsync(TodoItem item)
     {
         _dbContext.TodoItems.Update(item);
-        await _dbContext.SaveChangesAsync();
+        int result = await _dbContext.SaveChangesAsync();
+        return result > 0;
     }
 
     public async Task DeleteAsync(Guid id)

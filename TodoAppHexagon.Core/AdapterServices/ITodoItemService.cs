@@ -13,7 +13,7 @@ namespace TodoAppHexagon.Core.AdapterServices
         Task<List<TodoItemDto>> GetAllTodoItems();
         Task<TodoItemDto> GetTodoItem(Guid id);
         Task CreateTodoItem(CreateTodoItemCommand item);
-        Task UpdateTodoItem(TodoItem item);
+        Task<bool> UpdateTodoItem(UpdateTodoItemDto item);
         Task DeleteTodoItem(Guid id);
     }
 }
