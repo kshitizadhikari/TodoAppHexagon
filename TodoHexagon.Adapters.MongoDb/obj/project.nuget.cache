@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "Vimr3jd5o4OrobMigkZDeGDIEaZmhjPJSFQ2ponRyajq8+WxSHXAZN9K5lEtnzvKeT5reoSIJtTXU12TLeRISw==",
+  "success": true,
+  "projectFilePath": "D:\\asp.net\\TodoAppHexagon\\TodoHexagon.Adapters.MongoDb\\TodoHexagon.Adapters.MongoDb.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kshitiz\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\kshitiz\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\kshitiz\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
+    "C:\\Users\\kshitiz\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

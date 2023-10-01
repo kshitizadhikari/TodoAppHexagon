@@ -20,6 +20,7 @@ builder.Services.AddScoped<IMediator, Mediator>();
 builder.Services.AddMediatR(typeof(CreateTodoItemCommandHandler).GetTypeInfo().Assembly);
 builder.Services.AddTransient<ITodoRepository, SqlServerTodoRepository>();
 builder.Services.AddTransient<ITodoItemService, TodoItemService>();
+builder.Services.AddScoped<SqlServerTodoRepository>();
 //builder.Services.AddTransient<ITodoService, TodoItemService>();
 
 var app = builder.Build();
