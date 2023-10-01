@@ -1,0 +1,41 @@
+﻿@model List<TodoAppHexagon.Core.DTOs.TodoItemDto>
+@{
+    ViewData["Title"] = "Todo Index";
+}
+
+<div>
+    <h1>Todo Index Page</h1>
+</div>
+
+<div>
+    <div>
+        <button>
+            <a class="nav-link text-dark" asp-area="" asp-controller="TodoItem" asp-action="AddTodo">Todo</a>
+        </button>
+    </div>
+
+</div>
+<div>
+    <table class ="table table-hover">
+        <thead>
+        <tr class="table-dark">
+            <th>Title</th>
+            <th>IsCompleted</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var todo in Model)
+        {
+            <tr class="table-primary">
+                <td>@todo.Title</td>
+                <td>@todo.IsCompleted</td>
+               @* <td>
+                    <a asp-area="Admin" asp-controller="Home" asp-action="EditRoom" asp-route-id="@todo.Id">Edit</a> |
+                    <a asp-area="Admin" asp-controller="Home" asp-action="DeleteRoom" asp-route-id="@room.Id">Remove</a>
+                </td>*@
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+

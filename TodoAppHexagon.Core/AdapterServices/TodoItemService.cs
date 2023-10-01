@@ -14,19 +14,31 @@ namespace TodoAppHexagon.Core.Services
             _todoRepository = todoRepository;
         }
 
-        public Task<List<TodoItem>> GetAllTodoItems()
+        public async Task<List<TodoItemDto>> GetAllTodoItems()
         {
-            throw new NotImplementedException();
+            List<TodoItem> allTodoItems = await _todoRepository.GetAllAsync();
+            List<TodoItemDto> todoItemDtos = allTodoItems.Select(item => new TodoItemDto
+            {
+                Title = item.Title,
+                IsCompleted = item.IsCompleted
+            }).ToList();
+            return todoItemDtos;
         }
 
-        public Task<TodoItem> GetTodoItem(Guid id)
+        public async Task<TodoItemDto> GetTodoItem(Guid id)
         {
-            throw new NotImplementedException();
+            TodoItem todo = await _todoRepository.GetByIdAsync(id);
+            TodoItemDto todoDto = new TodoItemDto
+            {
+                Title = todo.Title,
+                IsCompleted = todo.IsCompleted
+            };
+            return todoDto;
         }
 
         public async Task CreateTodoItem(CreateTodoItemCommand item)
         {
-            var todoItem = new TodoItem(Guid.NewGuid(), item.Title, item.IsCompleted, DateTime.Now)
+            var todoItem = new TodoItem(Guid.NewGuid(), item.Title, item.IsCompleted)
             {
                 Title = item.Title,
                 IsCompleted = item.IsCompleted,

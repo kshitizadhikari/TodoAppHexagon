@@ -10,8 +10,8 @@ namespace TodoAppHexagon.Core.AdapterServices
 {
     public interface ITodoItemService
     {
-        Task<List<TodoItem>> GetAllTodoItems();
-        Task<TodoItem> GetTodoItem(Guid id);
+        Task<List<TodoItemDto>> GetAllTodoItems();
+        Task<TodoItemDto> GetTodoItem(Guid id);
         Task CreateTodoItem(CreateTodoItemCommand item);
         Task UpdateTodoItem(TodoItem item);
         Task DeleteTodoItem(Guid id);

@@ -3,7 +3,8 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using TodoAppHexagon.Core.AdapterServices;
 using TodoAppHexagon.Core.CQRS.Commands.CreateTodoItem;
-using TodoAppHexagon.Core.DTOs;
+ using TodoAppHexagon.Core.CQRS.Queries.GetAllTodoItems;
+ using TodoAppHexagon.Core.DTOs;
 using TodoAppHexagon.Core.Entities;
 using TodoAppHexagon.Core.Ports;
 
@@ -20,7 +21,13 @@ namespace TodoAppHexagon.Controllers
             _mediator = mediator;
         }
 
-        public IActionResult Todo()
+        public async Task<IActionResult> Index()
+        {
+            List<TodoItemDto> allTodoItemDtos = await _mediator.Send(new GetAllTodoItemsQuery());
+            return View(allTodoItemDtos);
+        }
+
+        public IActionResult AddTodo()
         {
             var model = new CreateTodoItemDto();
             return View(model);
@@ -28,11 +35,11 @@ namespace TodoAppHexagon.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Todo(CreateTodoItemDto dto)
+        public async Task<IActionResult> AddTodo(CreateTodoItemDto dto)
         {
             if (!ModelState.IsValid)
             {
-                return RedirectToAction("Todo");
+                return RedirectToAction("AddTodo");
             }
 
             var command = new CreateTodoItemCommand
@@ -43,7 +50,7 @@ namespace TodoAppHexagon.Controllers
 
             await _mediator.Send(command);
 
-            return RedirectToAction("Todo");
+            return RedirectToAction("AddTodo");
         }
 
     }

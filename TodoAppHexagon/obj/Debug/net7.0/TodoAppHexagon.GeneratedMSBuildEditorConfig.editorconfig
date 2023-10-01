@@ -40,8 +40,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/asp.net/TodoAppHexagon/TodoAppHexagon/Views/TodoItem/Todo.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9kb0l0ZW1cVG9kby5jc2h0bWw=
+[D:/asp.net/TodoAppHexagon/TodoAppHexagon/Views/TodoItem/AddTodo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9kb0l0ZW1cQWRkVG9kby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/asp.net/TodoAppHexagon/TodoAppHexagon/Views/TodoItem/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9kb0l0ZW1cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/asp.net/TodoAppHexagon/TodoAppHexagon/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/asp.net/TodoAppHexagon/TodoAppHexagon/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/asp.net/TodoAppHexagon/TodoAppHexagon/Pages/Shared/_Layout.cshtml]
